@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bahasa Indonesia</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- my style -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* Initially hide all content items */
+      .materi-item-content {
+        display: none;
+      }
+
+      /* Flexbox for proper column layout */
+      .materi-wrapper {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .materi-nav,
+      .materi-content {
+        width: 45%;
+      }
+
+      .materi-item {
+        margin-bottom: 1rem;
+      }
+
+      .materi-details {
+        margin-left: 1rem;
+        display: none;
+      }
+
+      .materi-item a:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- navbar start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo"><span>Bahasa</span> Indonesia</a>
+
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#materi">Materi</a>
+        <a href="#anggota">Anggota</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- hero section start -->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1><span>Bahasa</span> Indonesia</h1>
+        <p>Pedoman Umum Ejaan Bahasa Indonesia</p>
+      </main>
+    </section>
+    <!-- hero section end -->
+
+    <!-- materi section start -->
+    <section id="materi" class="materi">
+      <h2><span>Materi</span> Kami</h2>
+      <div class="materi-wrapper">
+        <!-- Materi Nav -->
+        <div class="materi-nav">
+          <!-- Pemakaian Huruf -->
+          <div class="materi-item">
+            <a
+              href="#pemakaian-huruf"
+              class="materi-link"
+              onclick="toggleMateri('pemakaian-huruf')"
+              >Pemakaian Huruf</a
+            >
+            <div class="materi-details" id="pemakaian-huruf">
+              <ul>
+                <li>
+                  <a
+                    href="#huruf-abjad"
+                    class="materi-link"
+                    onclick="toggleMateri('huruf-abjad')"
+                    >Huruf Abjad</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#huruf-vokal"
+                    class="materi-link"
+                    onclick="toggleMateri('huruf-vokal')"
+                    >Huruf Vokal</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#huruf-kons"
+                    class="materi-link"
+                    onclick="toggleMateri('huruf-kons')"
+                    >Huruf Konsonan</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#huruf-dif"
+                    class="materi-link"
+                    onclick="toggleMateri('huruf-dif')"
+                    >Huruf Diftong</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#gab-huruf-kon"
+                    class="materi-link"
+                    onclick="toggleMateri('gab-huruf-kon')"
+                    >Gabungan Huruf Konsonan</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#huruf-kapital"
+                    class="materi-link"
+                    onclick="toggleMateri('huruf-kapital')"
+                    >Huruf Kapital</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#huruf-miring"
+                    class="materi-link"
+                    onclick="toggleMateri('huruf-miring')"
+                    >Huruf Miring</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#huruf-tebal"
+                    class="materi-link"
+                    onclick="toggleMateri('huruf-tebal')"
+                    >Huruf Tebal</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Penulisan Kata -->
+          <div class="materi-item">
+            <a
+              href="#penulisan-kata"
+              class="materi-link"
+              onclick="toggleMateri('penulisan-kata')"
+              >Penulisan Kata</a
+            >
+            <div class="materi-details" id="penulisan-kata">
+              <ul>
+                <li>
+                  <a
+                    href="#kata-dasar"
+                    class="materi-link"
+                    onclick="toggleMateri('kata-dasar')"
+                    >Kata Dasar</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#kata-berimbuhan"
+                    class="materi-link"
+                    onclick="toggleMateri('kata-berimbuhan')"
+                    >Kata Berimbuhan</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#bentuk-ulang"
+                    class="materi-link"
+                    onclick="toggleMateri('bentuk-ulang')"
+                    >Bentuk Ulang</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#gabungan-kata"
+                    class="materi-link"
+                    onclick="toggleMateri('gabungan-kata')"
+                    >Gabungan Kata</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#pemenggalan-kata"
+                    class="materi-link"
+                    onclick="toggleMateri('pemenggalan-kata')"
+                    >Pemenggalan Kata</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#kata-depan"
+                    class="materi-link"
+                    onclick="toggleMateri('kata-depan')"
+                    >Kata Depan</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#partikel"
+                    class="materi-link"
+                    onclick="toggleMateri('partikel')"
+                    >Partikel</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#singkatan-akronim"
+                    class="materi-link"
+                    onclick="toggleMateri('singkatan-akronim')"
+                    >Singkatan dan Akronim</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#angka-bil"
+                    class="materi-link"
+                    onclick="toggleMateri('angka-bil')"
+                    >Angka dan Bilangan</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#kata-ganti"
+                    class="materi-link"
+                    onclick="toggleMateri('kata-ganti')"
+                    >Kata Ganti ku-, kau-, -ku, -mu, -nya</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#kata-sandang"
+                    class="materi-link"
+                    onclick="toggleMateri('kata-sandang')"
+                    >Kata Sandang si dan sang</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Pemakaian Tanda Baca -->
+          <div class="materi-item">
+            <a
+              href="#pemakaian-tanda-baca"
+              class="materi-link"
+              onclick="toggleMateri('pemakaian-tanda-baca')"
+              >Pemakaian Tanda Baca</a
+            >
+            <div class="materi-details" id="pemakaian-tanda-baca">
+              <ul>
+                <li>
+                  <a
+                    href="#tanda-titik"
+                    class="materi-link"
+                    onclick="toggleMateri('tanda-titik')"
+                    >Tanda Titik (.)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#tanda-koma"
+                    class="materi-link"
+                    onclick="toggleMateri('tanda-koma')"
+                    >Tanda Koma (,)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#tanda-titik-koma"
+                    class="materi-link"
+                    onclick="toggleMateri('tanda-titik-koma')"
+                    >Tanda Titik Koma(;)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#tanda-titik-dua"
+                    class="materi-link"
+                    onclick="toggleMateri('tanda-titik-dua')"
+                    >Tanda Titik Dua (:)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#tanda-hubung"
+                    class="materi-link"
+                    onclick="toggleMateri('tanda-hubung')"
+                    >Tanda Hubung (-)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#tanda-pisah"
+                    class="materi-link"
+                    onclick="toggleMateri('tanda-pisah')"
+                    >Tanda Pisah (--)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#tanda-tanya"
+                    class="materi-link"
+                    onclick="toggleMateri('tanda-tanya')"
+                    >Tanda Tanya (?)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#tanda-seru"
+                    class="materi-link"
+                    onclick="toggleMateri('tanda-seru')"
+                    >Tanda Seru (!)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#tanda-elipsis"
+                    class="materi-link"
+                    onclick="toggleMateri('tanda-elipsis')"
+                    >Tanda Elipsis (...)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#tanda-petik"
+                    class="materi-link"
+                    onclick="toggleMateri('tanda-petik')"
+                    >Tanda Petik ("...")</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#tanda-pettung"
+                    class="materi-link"
+                    onclick="toggleMateri('tanda-pettung')"
+                    >Tanda Petik Tunggal ('...')</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#tanda-kurung"
+                    class="materi-link"
+                    onclick="toggleMateri('tanda-kurung')"
+                    >Tanda Kurung ((...))</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#tanda-kursik"
+                    class="materi-link"
+                    onclick="toggleMateri('tanda-kursik')"
+                    >Tanda Kurung Siku ([...])</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#garis-miring"
+                    class="materi-link"
+                    onclick="toggleMateri('garis-miring')"
+                    >Garis Miring (/)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#tanda-apostrof"
+                    class="materi-link"
+                    onclick="toggleMateri('tanda-apostrof')"
+                    >Tanda Penyingkat atau Apostrof (')</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Penulisan Unsur Serapan -->
+          <div class="materi-item">
+            <a
+              href="#penulisan-unsur-serapan"
+              class="materi-link"
+              onclick="toggleMateri('penulisan-unsur-serapan')"
+              >Penulisan Unsur Serapan</a
+            >
+            <div class="materi-details" id="penulisan-unsur-serapan">
+              <ul>
+                <li>
+                  <a
+                    href="#kata-sandang"
+                    class="materi-link"
+                    onclick="toggleMateri('kata-sandang')"
+                    >Kata Sandang</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#kata-serapan"
+                    class="materi-link"
+                    onclick="toggleMateri('kata-serapan')"
+                    >Kata Serapan</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- materi content -->
+        <div class="materi-content">
+          <!-- Pemakaian Huruf Content -->
+          <div id="huruf-abjad" class="materi-item-content">
+            <h4>Huruf Abjad</h4>
+            <p>Penjelasan mengenai huruf abjad...</p>
+          </div>
+          <div id="huruf-vokal" class="materi-item-content">
+            <h4>Huruf Vokal</h4>
+            <p>Penjelasan mengenai huruf vokal...</p>
+          </div>
+          <div id="huruf-kons" class="materi-item-content">
+            <h4>Huruf Konsonan</h4>
+            <p>Penjelasan mengenai huruf konsonan...</p>
+          </div>
+          <div id="huruf-dif" class="materi-item-content">
+            <h4>Huruf Diftong</h4>
+            <p>Penjelasan mengenai huruf diftong...</p>
+          </div>
+
+          <!-- Penulisan Kata Content -->
+          <div id="kata-dasar" class="materi-item-content">
+            <h4>Kata Dasar</h4>
+            <p>
+              <strong>Kata dasar</strong> adalah bentuk kata yang belum mendapat
+              imbuhan, ulangan, atau gabungan kata lain. Kata ini merupakan
+              bentuk asli dan digunakan sebagai dasar dalam pembentukan kata
+              turunan.
+            </p>
+            <p>Misalnya :</p>
+            <ul>
+              <li><strong>Kantor</strong> pajak penuh sesak.</li>
+              <li>Saya pergi ke <strong>sekolah</strong>.</li>
+              <li><strong>Buku</strong> itu sangat tebal.</li>
+            </ul>
+          </div>
+
+          <div id="kata-berimbuhan" class="materi-item-content">
+            <h4>Kata Berimbuhan</h4>
+
+            <p>
+              1. Imbuhan (awalan, sisipan, akhiran, serta gabungan awalan dan
+              akhiran) ditulis serangkai dengan bentuk dasarnya.
+            </p>
+            <p>Misalnya:</p>
+            <ul>
+              <li>berjalan</li>
+              <li>berkelanjutan</li>
+              <li>mempermudah</li>
+              <li>gemetar</li>
+              <li>lukisan</li>
+              <li>kemauan</li>
+              <li>perbaikan</li>
+            </ul>
+
+            <p>
+              <strong>Catatan:</strong> Imbuhan yang diserap dari unsur asing,
+              seperti <em>-isme</em>, <em>-man</em>, <em>-wan</em>, atau
+              <em>-wi</em>, ditulis serangkai dengan bentuk dasarnya.
+            </p>
+            <p>Misalnya:</p>
+            <ul>
+              <li>sukuisme</li>
+              <li>seniman</li>
+              <li>kamerawan</li>
+              <li>gerejawi</li>
+            </ul>
+
+            <p>
+              2. Bentuk terikat ditulis serangkai dengan kata yang mengikutinya.
+            </p>
+            <p>Misalnya:</p>
+            <ul>
+              <li>adibusana</li>
+              <li>biokimia</li>
+              <li>dekameter</li>
+              <li>ekstrakurikuler</li>
+              <li>infrastruktur</li>
+              <li>kontraindikasi</li>
+              <li>mancanegara</li>
+              <li>narapidana</li>
+              <li>pascasarjana</li>
+              <li>semiprofesional</li>
+              <li>transmigrasi</li>
+              <li>ultramodern</li>
+            </ul>
+
+            <p><strong>Catatan:</strong></p>
+            <ol>
+              <li>
+                Bentuk terikat yang diikuti oleh kata yang berhuruf awal kapital
+                atau singkatan berupa huruf kapital dirangkaikan dengan tanda
+                hubung (-).<br />
+                <strong>Misalnya:</strong>
+                <ul>
+                  <li>non-Indonesia</li>
+                  <li>pro-Barat</li>
+                  <li>anti-PKI</li>
+                </ul>
+              </li>
+              <li>
+                Bentuk <em>maha</em> yang diikuti kata turunan yang mengacu pada
+                nama atau sifat Tuhan ditulis terpisah dengan huruf awal
+                kapital.<br />
+                <strong>Misalnya:</strong>
+                <ul>
+                  <li>
+                    Marilah kita bersyukur kepada Tuhan Yang Maha Pengasih.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Bentuk <em>maha</em> yang diikuti kata dasar yang mengacu kepada
+                nama atau sifat Tuhan (kecuali kata <em>esa</em>) ditulis
+                serangkai.<br />
+                <strong>Misalnya:</strong>
+                <ul>
+                  <li>Tuhan Yang Mahakuasa menentukan arah hidup kita.</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+
+          <div id="bentuk-ulang" class="materi-item-content">
+            <h4>Bentuk Ulang</h4>
+
+            <p>
+              Bentuk ulang ditulis dengan menggunakan tanda hubung (-) di antara
+              unsur-unsurnya.
+            </p>
+            <p>Misalnya:</p>
+            <ul>
+              <li>anak-anak</li>
+              <li>buku-buku</li>
+              <li>hati-hati</li>
+              <li>ramah-tamah</li>
+              <li>sayur-mayur</li>
+              <li>serba-serbi</li>
+              <li>tunggang-langgang</li>
+              <li>berjalan-jalan</li>
+              <li>cumi-cumi</li>
+              <li>kura-kura</li>
+              <li>kupu-kupu</li>
+            </ul>
+
+            <p>
+              <strong>Catatan:</strong> Bentuk ulang gabungan kata ditulis
+              dengan mengulang unsur pertama.
+            </p>
+            <p>Misalnya:</p>
+            <ul>
+              <li>surat kabar → <strong>surat-surat kabar</strong></li>
+              <li>kapal barang → <strong>kapal-kapal barang</strong></li>
+              <li>rak buku → <strong>rak-rak buku</strong></li>
+              <li>
+                kereta api cepat → <strong>kereta-kereta api cepat</strong>
+              </li>
+            </ul>
+          </div>
+
+          <div id="gabungan-kata" class="materi-item-content">
+            <h4>Gabungan Kata</h4>
+
+            <p>
+              1. Unsur gabungan kata yang lazim disebut kata majemuk, termasuk
+              istilah khusus, ditulis terpisah.
+            </p>
+            <p>Misalnya:</p>
+            <ul>
+              <li>duta besar</li>
+              <li>kambing hitam</li>
+              <li>orang tua</li>
+              <li>simpang empat</li>
+              <li>rumah sakit jiwa</li>
+              <li>persegi panjang</li>
+              <li>cendera mata</li>
+            </ul>
+
+            <p>
+              2. Gabungan kata yang dapat menimbulkan salah pengertian ditulis
+              dengan membubuhkan tanda hubung (-) di antara unsur-unsurnya.
+            </p>
+            <p>Misalnya:</p>
+            <ul>
+              <li>anak-istri pejabat</li>
+              <li>ibu-bapak kami</li>
+              <li>buku-sejarah baru</li>
+            </ul>
+
+            <p>
+              3. Gabungan kata yang penulisannya terpisah tetap ditulis terpisah
+              jika mendapat awalan atau akhiran.
+            </p>
+            <p>Misalnya:</p>
+            <ul>
+              <li>bertepuk tangan</li>
+              <li>menganak sungai</li>
+              <li>garis bawahi</li>
+              <li>sebar luaskan</li>
+            </ul>
+
+            <p>
+              4. Gabungan kata yang mendapat awalan dan akhiran sekaligus
+              ditulis serangkai.
+            </p>
+            <p>Misalnya:</p>
+            <ul>
+              <li>dilipatgandakan</li>
+              <li>menggarisbawahi</li>
+              <li>menyebarluaskan</li>
+              <li>penghancurleburan</li>
+              <li>pertanggungjawaban</li>
+            </ul>
+
+            <p>5. Gabungan kata yang sudah padu ditulis serangkai.</p>
+            <p>Misalnya:</p>
+            <ul>
+              <li>acapkali</li>
+              <li>barangkali</li>
+              <li>dukacita</li>
+              <li>hulubalang</li>
+              <li>kasatmata</li>
+              <li>matahari</li>
+              <li>peribahasa</li>
+              <li>radioaktif</li>
+              <li>saputangan</li>
+              <li>sukacita</li>
+              <li>wiraswasta</li>
+            </ul>
+          </div>
+
+          <div id="pemenggalan-kata" class="materi-item-content">
+            <h4>Pemenggalan Kata</h4>
+
+            <ol>
+              <li>
+                <p>
+                  <strong>Pemenggalan kata pada kata dasar</strong> dilakukan
+                  sebagai berikut:
+                </p>
+                <ul>
+                  <li>
+                    <strong>a.</strong> Jika di tengah kata terdapat huruf vokal
+                    yang berurutan, pemenggalannya dilakukan di antara kedua
+                    huruf vokal itu.
+                    <p>Misalnya:</p>
+                    <ul>
+                      <li>bu-ah</li>
+                      <li>ma-in</li>
+                      <li>ni-at</li>
+                      <li>sa-at</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>b.</strong> Huruf diftong <em>ai</em>, <em>au</em>,
+                    <em>ei</em>, dan <em>oi</em> tidak dipenggal.
+                    <p>Misalnya:</p>
+                    <ul>
+                      <li>pan-dai</li>
+                      <li>au-la</li>
+                      <li>sau-da-ra</li>
+                      <li>sur-vei</li>
+                      <li>am-boi</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>c.</strong> Jika di tengah kata dasar terdapat huruf
+                    konsonan (termasuk gabungan huruf konsonan) di antara dua
+                    huruf vokal, pemenggalannya dilakukan sebelum huruf konsonan
+                    itu.
+                    <p>Misalnya:</p>
+                    <ul>
+                      <li>ba-pak</li>
+                      <li>la-wan</li>
+                      <li>de-ngan</li>
+                      <li>ke-nyang</li>
+                      <li>mu-ta-khir</li>
+                      <li>mu-sya-wa-rah</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>d.</strong> Jika terdapat dua huruf konsonan yang
+                    berurutan, pemenggalannya dilakukan di antara kedua konsonan
+                    itu.
+                    <p>Misalnya:</p>
+                    <ul>
+                      <li>Ap-ril</li>
+                      <li>cap-lok</li>
+                      <li>makh-luk</li>
+                      <li>man-di</li>
+                      <li>sang-gup</li>
+                      <li>som-bong</li>
+                      <li>swas-ta</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>e.</strong> Jika terdapat tiga huruf konsonan atau
+                    lebih yang masing-masing melambangkan satu bunyi,
+                    pemenggalannya dilakukan di antara huruf konsonan pertama
+                    dan kedua.
+                    <p>Misalnya:</p>
+                    <ul>
+                      <li>ul-tra</li>
+                      <li>ben-trok</li>
+                      <li>in-stru-men</li>
+                    </ul>
+                  </li>
+                </ul>
+                <p>
+                  <strong>Catatan:</strong> Gabungan huruf konsonan yang
+                  melambangkan satu bunyi tidak dipenggal.
+                </p>
+                <p>Misalnya:</p>
+                <ul>
+                  <li>bang-krut</li>
+                  <li>bang-sa</li>
+                  <li>ikh-las</li>
+                  <li>kong-res</li>
+                  <li>makh-luk</li>
+                  <li>masy-hur</li>
+                  <li>sang-gup</li>
+                </ul>
+              </li>
+
+              <li>
+                <p>
+                  <strong>Pemenggalan kata turunan</strong> sedapat-dapatnya
+                  dilakukan di antara bentuk dasar dan unsur pembentuknya.
+                </p>
+                <p>Misalnya:</p>
+                <ul>
+                  <li>ber-jalan</li>
+                  <li>mem-bantu</li>
+                  <li>mem-pertanggungjawabkan</li>
+                  <li>memper-tanggungjawabkan</li>
+                  <li>mempertanggung-jawabkan</li>
+                  <li>mempertanggungjawab-kan</li>
+                  <li>per-buatan</li>
+                </ul>
+
+                <p><strong>Catatan:</strong></p>
+                <ol type="a">
+                  <li>
+                    Pemenggalan kata berimbuhan yang bentuk dasarnya mengalami
+                    perubahan dilakukan seperti pada kata dasar.
+                    <p>Misalnya:</p>
+                    <ul>
+                      <li>me-nu-tup</li>
+                      <li>me-ma-kai</li>
+                      <li>me-nya-pu</li>
+                      <li>me-nge-cat</li>
+                      <li>pe-nye-but</li>
+                      <li>pe-no-long</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Pemenggalan kata bersisipan dilakukan seperti pada kata
+                    dasar.
+                    <p>Misalnya:</p>
+                    <ul>
+                      <li>ge-lem-bung</li>
+                      <li>ge-mu-ruh</li>
+                      <li>ge-ri-gi</li>
+                      <li>si-nam-bung</li>
+                      <li>te-lun-juk</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Pemenggalan kata yang menyebabkan munculnya satu huruf di
+                    awal atau akhir baris tidak dilakukan.
+                    <p>Misalnya:</p>
+                    <ul>
+                      <li>
+                        Beberapa pendapat mengenai masalah itu telah disampaikan
+                        ….
+                      </li>
+                      <li>
+                        Walaupun cuma-cuma, mereka tidak mau mengambil makanan
+                        itu.
+                      </li>
+                    </ul>
+                  </li>
+                </ol>
+              </li>
+
+              <li>
+                Jika sebuah kata terdiri atas dua unsur atau lebih dan salah
+                satu unsurnya itu dapat bergabung dengan unsur lain,
+                pemenggalannya dilakukan di antara unsur-unsur itu. Tiap unsur
+                gabungan itu dipenggal seperti pada kata dasar.
+                <p>Misalnya:</p>
+                <ul>
+                  <li>biografi → bio-grafi → bi-o-gra-fi</li>
+                  <li>biodata → bio-data → bi-o-da-ta</li>
+                  <li>fotografi → foto-grafi → fo-to-gra-fi</li>
+                  <li>introspeksi → intro-speksi → in-tro-spek-si</li>
+                  <li>kilometer → kilo-meter → ki-lo-me-ter</li>
+                  <li>pascapanen → pasca-panen → pas-ca-pa-nen</li>
+                </ul>
+              </li>
+
+              <li>
+                Nama orang yang terdiri atas dua unsur atau lebih pada akhir
+                baris dipenggal di antara unsur-unsurnya.
+                <p>Misalnya:</p>
+                <p>
+                  Lagu “Indonesia Raya” digubah oleh
+                  <strong>Wage Rudolf Supratman</strong>.
+                </p>
+              </li>
+
+              <li>
+                Singkatan nama diri dan gelar yang terdiri atas dua huruf atau
+                lebih tidak dipenggal.
+                <p>Misalnya:</p>
+                <ul>
+                  <li>Ia bekerja di <strong>DLLAJR</strong>.</li>
+                  <li>
+                    Pujangga terakhir Keraton Surakarta bergelar
+                    <strong>R.Ng. Rangga Warsita</strong>.
+                  </li>
+                </ul>
+                <p>
+                  <strong>Catatan:</strong> Penulisan berikut
+                  <em>dihindari</em>:
+                </p>
+                <ul>
+                  <li>Ia bekerja di DLL-<br />AJR.</li>
+                  <li>
+                    Pujangga terakhir Keraton Surakarta bergelar R.<br />Ng.
+                    Rangga Warsita.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+
+          <div id="kata-depan" class="materi-item-content">
+            <h4>Kata Depan</h4>
+            <p>
+              Kata depan, seperti <em>di</em>, <em>ke</em>, dan <em>dari</em>,
+              ditulis terpisah dari kata yang mengikutinya.
+            </p>
+            <p><strong>Misalnya:</strong></p>
+            <ul>
+              <li><em>Di</em> mana dia sekarang?</li>
+              <li>Kain itu disimpan <em>di</em> dalam lemari.</li>
+              <li>Dia ikut terjun <em>ke</em> tengah kancah perjuangan.</li>
+              <li>Mari kita berangkat <em>ke</em> kantor.</li>
+              <li>Saya pergi <em>ke</em> sana mencarinya.</li>
+              <li>Ia berasal <em>dari</em> Pulau Penyengat.</li>
+              <li>Cincin itu terbuat <em>dari</em> emas.</li>
+            </ul>
+          </div>
+
+          <div id="partikel" class="materi-item-content">
+            <h4>Partikel</h4>
+
+            <p>
+              1. Partikel <em>-lah</em>, <em>-kah</em>, dan
+              <em>-tah</em> ditulis serangkai dengan kata yang mendahuluinya.
+            </p>
+            <p><strong>Misalnya:</strong></p>
+            <ul>
+              <li>Baca<em>lah</em> buku itu baik-baik!</li>
+              <li>Apa<em>kah</em> yang tersirat dalam surat itu?</li>
+              <li>Siapa<em>kah</em> gerangan dia?</li>
+              <li>Apa<em>tah</em> gunanya bersedih hati?</li>
+            </ul>
+
+            <p>
+              2. Partikel <em>pun</em> ditulis terpisah dari kata yang
+              mendahuluinya.
+            </p>
+            <p><strong>Misalnya:</strong></p>
+            <ul>
+              <li>
+                Apa <em>pun</em> permasalahan yang muncul, dia dapat
+                mengatasinya dengan bijaksana.
+              </li>
+              <li>
+                Jika kita hendak pulang tengah malam <em>pun</em>, kendaraan
+                masih tersedia.
+              </li>
+              <li>
+                Jangankan dua kali, satu kali <em>pun</em> engkau belum pernah
+                berkunjung ke rumahku.
+              </li>
+            </ul>
+
+            <p><strong>Catatan:</strong></p>
+            <p>
+              Partikel <em>pun</em> yang merupakan unsur kata penghubung ditulis
+              serangkai.
+            </p>
+            <p><strong>Misalnya:</strong></p>
+            <ul>
+              <li>
+                Meski<em>pun</em> sibuk, dia dapat menyelesaikan tugas tepat
+                pada waktunya.
+              </li>
+              <li>Dia tetap bersemangat walau<em>pun</em> lelah.</li>
+              <li>Ada<em>pun</em> penyebab kemacetan itu belum diketahui.</li>
+              <li>
+                Bagaimana<em>pun</em> pekerjaan itu harus selesai minggu depan.
+              </li>
+            </ul>
+
+            <p>
+              3. Partikel <em>per</em> yang berarti ‘demi’, ‘tiap’, atau ‘mulai’
+              ditulis terpisah dari kata yang mengikutinya.
+            </p>
+            <p><strong>Misalnya:</strong></p>
+            <ul>
+              <li>Mereka masuk ke dalam ruang rapat satu <em>per</em> satu.</li>
+              <li>Harga kain itu Rp50.000,00 <em>per</em> meter.</li>
+              <li>
+                Karyawan itu mendapat kenaikan gaji <em>per</em> 1 Januari.
+              </li>
+            </ul>
+          </div>
+
+          <div id="singkatan-akronim" class="materi-item-content">
+            <h4>Singkatan dan Akronim</h4>
+
+            <p>
+              1. Singkatan nama orang, gelar, sapaan, jabatan, atau pangkat
+              diikuti dengan tanda titik pada setiap unsur singkatan itu.
+            </p>
+            <p><strong>Misalnya:</strong></p>
+            <ul>
+              <li>A.H. Nasution &mdash; Abdul Haris Nasution</li>
+              <li>H. Hamid &mdash; Haji Hamid</li>
+              <li>Suman Hs. &mdash; Suman Hasibuan</li>
+              <li>W.R. Supratman &mdash; Wage Rudolf Supratman</li>
+              <li>M.B.A. &mdash; master of business administration</li>
+              <li>M.Hum. &mdash; magister humaniora</li>
+              <li>S.T. &mdash; Sarjana Teknik</li>
+            </ul>
+
+            <p>
+              2. a. Singkatan nama lembaga pemerintah, ketatanegaraan,
+              pendidikan, organisasi, serta nama dokumen resmi ditulis dengan
+              huruf kapital tanpa tanda titik.
+            </p>
+            <p><strong>Misalnya:</strong></p>
+            <ul>
+              <li>NKRI &mdash; Negara Kesatuan Republik Indonesia</li>
+              <li>UI &mdash; Universitas Indonesia</li>
+              <li>WHO &mdash; World Health Organization</li>
+            </ul>
+
+            <p>
+              b. Singkatan bukan nama diri ditulis dengan huruf kapital tanpa
+              tanda titik.
+            </p>
+            <p><strong>Misalnya:</strong></p>
+            <ul>
+              <li>PT &mdash; perseroan terbatas</li>
+              <li>MAN &mdash; madrasah aliyah negeri</li>
+              <li>SD &mdash; sekolah dasar</li>
+              <li>KTP &mdash; kartu tanda penduduk</li>
+              <li>NIP &mdash; nomor induk pegawai</li>
+            </ul>
+
+            <p>
+              3. Singkatan yang terdiri atas tiga huruf atau lebih diikuti
+              dengan tanda titik.
+            </p>
+            <p><strong>Misalnya:</strong></p>
+            <ul>
+              <li>hlm. &mdash; halaman</li>
+              <li>dll. &mdash; dan lain-lain</li>
+              <li>dsb. &mdash; dan sebagainya</li>
+              <li>dst. &mdash; dan seterusnya</li>
+              <li>ttd. &mdash; tertanda</li>
+              <li>yth. &mdash; yang terhormat</li>
+              <li>ybs. &mdash; yang bersangkutan</li>
+            </ul>
+
+            <p>
+              4. Singkatan dua huruf lazim dalam surat-menyurat diikuti tanda
+              titik.
+            </p>
+            <p><strong>Misalnya:</strong></p>
+            <ul>
+              <li>a.n. &mdash; atas nama</li>
+              <li>d.a. &mdash; dengan alamat</li>
+              <li>u.b. &mdash; untuk beliau</li>
+              <li>u.p. &mdash; untuk perhatian</li>
+              <li>s.d. &mdash; sampai dengan</li>
+            </ul>
+
+            <p>
+              5. Lambang kimia, satuan ukuran, takaran, timbangan, dan mata uang
+              tidak diikuti tanda titik.
+            </p>
+            <p><strong>Misalnya:</strong></p>
+            <ul>
+              <li>Cu &mdash; kuprum</li>
+              <li>cm &mdash; sentimeter</li>
+              <li>kVA &mdash; kilovolt-ampere</li>
+              <li>l &mdash; liter</li>
+              <li>kg &mdash; kilogram</li>
+              <li>Rp &mdash; rupiah</li>
+            </ul>
+
+            <p>
+              6. Akronim nama diri dari huruf awal tiap kata ditulis dengan
+              huruf kapital tanpa tanda titik.
+            </p>
+            <p><strong>Misalnya:</strong></p>
+            <ul>
+              <li>BIG &mdash; Badan Informasi Geospasial</li>
+              <li>BIN &mdash; Badan Intelijen Negara</li>
+              <li>LIPI &mdash; Lembaga Ilmu Pengetahuan Indonesia</li>
+              <li>LAN &mdash; Lembaga Administrasi Negara</li>
+              <li>PASI &mdash; Persatuan Atletik Seluruh Indonesia</li>
+            </ul>
+
+            <p>
+              7. Akronim nama diri berupa gabungan suku kata atau huruf dan suku
+              kata ditulis dengan huruf awal kapital.
+            </p>
+            <p><strong>Misalnya:</strong></p>
+            <ul>
+              <li>Bulog &mdash; Badan Urusan Logistik</li>
+              <li>Bappenas &mdash; Badan Perencanaan Pembangunan Nasional</li>
+              <li>Kowani &mdash; Kongres Wanita Indonesia</li>
+              <li>Kalteng &mdash; Kalimantan Tengah</li>
+              <li>
+                Mabbim &mdash; Majelis Bahasa Brunei
+                Darussalam-Indonesia-Malaysia
+              </li>
+              <li>Suramadu &mdash; Surabaya-Madura</li>
+            </ul>
+
+            <p>8. Akronim bukan nama diri ditulis dengan huruf kecil.</p>
+            <p><strong>Misalnya:</strong></p>
+            <ul>
+              <li>iptek &mdash; ilmu pengetahuan dan teknologi</li>
+              <li>pemilu &mdash; pemilihan umum</li>
+              <li>puskesmas &mdash; pusat kesehatan masyarakat</li>
+              <li>rapim &mdash; rapat pimpinan</li>
+              <li>rudal &mdash; peluru kendali</li>
+              <li>tilang &mdash; bukti pelanggaran</li>
+            </ul>
+          </div>
+
+          <div id="angka-bil" class="materi-item-content">
+            <h4>Angka dan Bilangan</h4>
+
+            <p>
+              Angka Arab atau angka Romawi lazim dipakai sebagai lambang
+              bilangan atau nomor.
+            </p>
+            <ul>
+              <li><strong>Angka Arab:</strong> 0, 1, 2, 3, 4, 5, 6, 7, 8, 9</li>
+              <li>
+                <strong>Angka Romawi:</strong> I, II, III, IV, V, VI, VII, VIII,
+                IX, X, L (50), C (100), D (500), M (1.000)
+              </li>
+            </ul>
+
+            <ol>
+              <li>
+                Bilangan dalam teks yang dapat dinyatakan dengan satu atau dua
+                kata ditulis dengan huruf, kecuali jika dipakai secara berurutan
+                (perincian).
+                <ul>
+                  <li>Mereka menonton drama itu sampai tiga kali.</li>
+                  <li>Koleksi perpustakaan itu lebih dari satu juta buku.</li>
+                  <li>
+                    Di antara 72 anggota yang hadir, 52 setuju, 15 tidak setuju,
+                    dan 5 abstain.
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <strong>a.</strong> Bilangan di awal kalimat ditulis dengan
+                huruf.
+                <ul>
+                  <li>
+                    <em>Lima puluh siswa</em> teladan mendapat beasiswa dari
+                    pemerintah daerah.
+                  </li>
+                  <li>
+                    <em>Tiga</em> pemenang sayembara itu diundang ke Jakarta.
+                  </li>
+                </ul>
+                <p><strong>Hindari penulisan:</strong></p>
+                <ul>
+                  <li><em>50 siswa</em> teladan mendapat beasiswa...</li>
+                  <li><em>3 pemenang</em> sayembara itu diundang...</li>
+                </ul>
+
+                <strong>b.</strong> Jika tidak bisa dinyatakan dengan satu atau
+                dua kata, susunan kalimat diubah.
+                <ul>
+                  <li>Panitia mengundang <em>250</em> orang peserta.</li>
+                  <li>Di lemari itu tersimpan <em>25</em> naskah kuno.</li>
+                </ul>
+                <p><strong>Hindari penulisan:</strong></p>
+                <ul>
+                  <li><em>250 orang</em> peserta diundang panitia.</li>
+                  <li><em>25 naskah</em> kuno tersimpan di lemari itu.</li>
+                </ul>
+              </li>
+
+              <li>
+                Bilangan besar dapat dipisah dengan huruf agar mudah dibaca.
+                <ul>
+                  <li>250 juta rupiah</li>
+                  <li>550 miliar rupiah</li>
+                  <li>10 triliun rupiah</li>
+                </ul>
+              </li>
+
+              <li>
+                Angka digunakan untuk menyatakan ukuran, waktu, atau uang.
+                <ul>
+                  <li>0,5 sentimeter</li>
+                  <li>5 kilogram</li>
+                  <li>4 hektare</li>
+                  <li>10 liter</li>
+                  <li>2 tahun 6 bulan 5 hari</li>
+                  <li>1 jam 20 menit</li>
+                  <li>Rp5.000,00</li>
+                  <li>US$3,50</li>
+                  <li>£5,10</li>
+                  <li>¥100</li>
+                </ul>
+              </li>
+
+              <li>
+                Angka digunakan untuk menomori alamat.
+                <ul>
+                  <li>Jalan Tanah Abang I No. 15 / Jalan Tanah Abang I/15</li>
+                  <li>Jalan Wijaya No. 14</li>
+                  <li>Hotel Mahameru, Kamar 169</li>
+                  <li>Gedung Samudra, Lantai II, Ruang 201</li>
+                </ul>
+              </li>
+
+              <li>
+                Angka digunakan untuk menomori bagian karangan atau kitab suci.
+                <ul>
+                  <li>Bab X, Pasal 5, halaman 252</li>
+                  <li>Surah Yasin: 9</li>
+                  <li>Markus 16: 15—16</li>
+                </ul>
+              </li>
+
+              <li>
+                Penulisan bilangan dengan huruf:
+                <strong>a. Bilangan Utuh</strong>
+                <ul>
+                  <li>dua belas (12)</li>
+                  <li>tiga puluh (30)</li>
+                  <li>lima ribu (5.000)</li>
+                </ul>
+                <strong>b. Bilangan Pecahan</strong>
+                <ul>
+                  <li>setengah / seperdua (½)</li>
+                  <li>seperenam belas (1/16)</li>
+                  <li>tiga perempat (¾)</li>
+                  <li>dua persepuluh (2/10)</li>
+                  <li>satu persen (1%)</li>
+                </ul>
+              </li>
+
+              <li>
+                Penulisan bilangan tingkat dapat berupa:
+                <ul>
+                  <li>abad XX</li>
+                  <li>abad ke-20</li>
+                  <li>abad kedua puluh</li>
+                  <li>Perang Dunia II</li>
+                  <li>Perang Dunia Ke-2</li>
+                  <li>Perang Dunia Kedua</li>
+                </ul>
+              </li>
+
+              <li>
+                Penulisan angka dengan akhiran <em>-an</em>:
+                <ul>
+                  <li>uang 1.000-an (uang seribuan)</li>
+                  <li>tahun 1950-an (tahun lima puluhan)</li>
+                  <li>uang 5.000-an (uang lima ribuan)</li>
+                </ul>
+              </li>
+
+              <li>
+                Penulisan angka dan huruf sekaligus untuk dokumen resmi:
+                <ul>
+                  <li>
+                    ...dipidana paling lama 1 (satu) tahun dan denda
+                    Rp200.000.000,00 (dua ratus juta rupiah).
+                  </li>
+                  <li>
+                    Diterima uang Rp2.950.000,00 (dua juta sembilan ratus lima
+                    puluh ribu rupiah).
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                Penulisan angka diikuti huruf secara lengkap:
+                <ul>
+                  <li>
+                    Tanda terima uang Rp900.500,50 (sembilan ratus ribu lima
+                    ratus rupiah lima puluh sen)
+                  </li>
+                  <li>
+                    Rp5.000.000,00 (lima juta rupiah) wajib dilampirkan dalam
+                    laporan pertanggungjawaban.
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                Bilangan dalam nama geografis ditulis dengan huruf.
+                <ul>
+                  <li>Kelapadua</li>
+                  <li>Kotonanampek</li>
+                  <li>Rajaampat</li>
+                  <li>Simpanglima</li>
+                  <li>Tigaraksa</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+          <div id="kata-ganti" class="materi-item-content">
+            <h4>Kata Ganti <em>ku-, kau-, -ku, -mu, -nya</em></h4>
+            <p>
+              Kata ganti <em>ku-</em> dan <em>kau-</em> ditulis serangkai dengan
+              kata yang mengikutinya, sedangkan <em>-ku</em>, <em>-mu</em>, dan
+              <em>-nya</em> ditulis serangkai dengan kata yang mendahuluinya.
+            </p>
+            <p><strong>Misalnya:</strong></p>
+            <ul>
+              <li>Rumah itu telah <em>ku</em>jual.</li>
+              <li>Majalah ini boleh <em>kau</em>baca.</li>
+              <li>
+                Buku<em>ku</em>, buku<em>mu</em>, dan buku<em>nya</em> tersimpan
+                di perpustakaan.
+              </li>
+              <li>Rumah<em>nya</em> sedang diperbaiki.</li>
+            </ul>
+          </div>
+
+          <div id="kata-sandang" class="materi-item-content">
+            <h4>Kata Sandang <em>si</em> dan <em>sang</em></h4>
+            <p>
+              Kata <em>si</em> dan <em>sang</em> ditulis terpisah dari kata yang
+              mengikutinya.
+            </p>
+            <p><strong>Misalnya:</strong></p>
+            <ul>
+              <li>Surat itu dikembalikan kepada <em>si</em> pengirim.</li>
+              <li>Toko itu memberikan hadiah kepada <em>si</em> pembeli.</li>
+              <li>Ibu itu menghadiahi <em>sang</em> suami kemeja batik.</li>
+              <li><em>Sang</em> adik mematuhi nasihat <em>sang</em> kakak.</li>
+              <li>Harimau itu marah sekali kepada <em>sang</em> Kancil.</li>
+              <li>
+                Dalam cerita itu <em>si</em> Buta berhasil menolong kekasihnya.
+              </li>
+            </ul>
+
+            <p><strong>Catatan:</strong></p>
+            <p>
+              Huruf awal <em>sang</em> ditulis dengan huruf kapital jika
+              <em>Sang</em> merupakan unsur nama Tuhan.
+            </p>
+            <p><strong>Misalnya:</strong></p>
+            <ul>
+              <li>Kita harus berserah diri kepada <em>Sang</em> Pencipta.</li>
+              <li>
+                Pura dibangun oleh umat Hindu untuk memuja <em>Sang</em> Hyang
+                Widhi Wasa.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pemakaian Tanda Baca Content -->
+          <div id="tanda-titik" class="materi-item-content">
+            <h4>Tanda Titik</h4>
+            <p>Penjelasan mengenai tanda titik...</p>
+          </div>
+          <div id="tanda-koma" class="materi-item-content">
+            <h4>Tanda Koma</h4>
+            <p>Penjelasan mengenai tanda koma...</p>
+          </div>
+          <div id="tanda-titik-koma" class="materi-item-content">
+            <h4>Tanda Titik Koma</h4>
+            <p>Penjelasan mengenai tanda titik koma...</p>
+          </div>
+
+          <!-- Penulisan Unsur Serapan Content -->
+          <div id="kata-sandang" class="materi-item-content">
+            <h4>Kata Sandang</h4>
+            <p>Penjelasan mengenai kata sandang...</p>
+          </div>
+          <div id="kata-serapan" class="materi-item-content">
+            <h4>Kata Serapan</h4>
+            <p>Penjelasan mengenai kata serapan...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- materi section end -->
+
+    <section id="anggota" class="anggota">
+      <h2><span>Anggota</span> Kami</h2>
+      <div class="anggota-list">
+        <div class="anggota">
+          <img src="/img/fara.jpeg" alt="Nama" />
+          <p>
+            FARADILA OCTAVIA NABILA <br />
+            NIM 622023016
+          </p>
+        </div>
+        <div class="anggota">
+          <img src="/img/sheren.jpeg" alt="Nama" />
+          <p>
+            SHEREN AUSTRIN PARARTA <br />
+            NIM 622024018
+          </p>
+        </div>
+        <div class="anggota">
+          <img src="https://via.placeholder.com/100" alt="Nama" />
+          <p>
+            Nama 3 <br />
+            NIM 12347
+          </p>
+        </div>
+        <div class="anggota">
+          <img src="https://via.placeholder.com/100" alt="Nama" />
+          <p>
+            Nama 4 <br />
+            NIM 12348
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer start -->
+    <footer>
+      <div class="socials">
+        <!-- Social Media Links -->
+        <a
+          href="https://www.instagram.com/faradilaoctv?igsh=NXVxcWF2cXM3a2E2"
+          target="_blank"
+        >
+          <i data-feather="instagram"></i>
+          <!-- Instagram Icon -->
+        </a>
+        <a
+          href="https://www.linkedin.com/in/faradila-octavia-4a1b80341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+          target="_blank"
+        >
+          <i data-feather="linkedin"></i>
+          <!-- LinkedIn Icon -->
+        </a>
+        <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">
+          <i data-feather="mail"></i>
+          <!-- Twitter Icon -->
+        </a>
+      </div>
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#materi">Materi</a>
+        <a href="#anggota">Anggota</a>
+        <!-- Kontak link in footer -->
+      </div>
+
+      <div class="credit">
+        <p>Created by <a href="">Kelompok 8</a>. | &copy; 2025.</p>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- feather icons -->
+    <script>
+      // Feather icon replace
+      feather.replace();
+
+      // Hamburger menu toggle
+      const navbarNav = document.querySelector(".navbar-nav");
+      const hamburger = document.querySelector("#hamburger-menu");
+
+      hamburger.onclick = () => {
+        navbarNav.classList.toggle("active");
+      };
+
+      // Close navbar if clicked outside
+      document.addEventListener("click", function (e) {
+        if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
+          navbarNav.classList.remove("active");
+        }
+      });
+
+      // Toggle the sub-sections and materi content
+      function toggleMateri(id) {
+        const allMateri = document.querySelectorAll(".materi-item-content");
+        const target = document.getElementById(id);
+
+        // Hide all sections first
+        allMateri.forEach((m) => {
+          m.style.display = "none";
+        });
+
+        // Toggle the clicked section
+        if (target) {
+          target.style.display =
+            target.style.display === "block" ? "none" : "block";
+        }
+      }
+
+      // Initially hide all content and only display the first section when page loads
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".materi-item-content").forEach((item) => {
+          item.style.display = "none";
+        });
+      });
+    </script>
+  </body>
+</html>
